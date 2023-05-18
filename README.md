@@ -6,6 +6,6 @@ If you have any questions or would like to discuss any specific algorithm in mor
 # Contact
 Aman Rajput 
 >E-mail - itsrajputaman1206@gmail.com
->Linkedin - [Aman Rajput](www.linkedin.com/in/aman-rajput-120603ar)
+>Linkedin - [Aman Rajput](https://www.linkedin.com/in/aman-rajput-120603ar/)
 
 
