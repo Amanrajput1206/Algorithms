@@ -5,10 +5,13 @@
 
 class Solution {
 public:
+// this function will reutrn true if either all the adjaccent nodes are visited or are surrounded by water
     bool checkIsland(vector<vector<char>>& grid, int i, int j){
         if(i<0||j<0||i>=grid.size()||j>=grid[0].size()) return true;
         if(grid[i][j]=='0') return true;
+        // mark the visited
         grid[i][j]='0';
+        //check all adjacent
         bool p=checkIsland(grid,i+1,j), q=checkIsland(grid,i-1,j), r=checkIsland(grid,i,j+1),s=checkIsland(grid,i,j-1);
         return (p && q && r && s);
     }
