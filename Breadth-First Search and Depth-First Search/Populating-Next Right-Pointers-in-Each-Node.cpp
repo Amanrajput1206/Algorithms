@@ -47,13 +47,14 @@ public:
 
             if(front==nullptr){
                 int n=level.size();
+                //make the next pointers to the next value in the level vector inserted in order(imp)
                 for(int i=0;i<n-1;i++) level[i]->next=level[i+1];
-
+                // clear the level for next iteration
                 level.clear();
-
+                //push nullptr after every level
                 if(!q.empty()) q.push(nullptr);
             }
-
+        //before reaching the next null pointer, add all the children of the current level into the queue in order
             else{
                 level.push_back(front);
                 if(front->left) q.push(front->left);
