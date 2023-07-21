@@ -5,7 +5,8 @@
 
 class Solution {
 public:
-// this function will reutrn true if either all the adjaccent nodes are visited or are surrounded by water
+//create a function that returns true if an Island is found. This can be achieved using DFS approach
+//also note that the numbers are passed as string '1','0'.
     bool checkIsland(vector<vector<char>>& grid, int i, int j){
         if(i<0||j<0||i>=grid.size()||j>=grid[0].size()) return true;
         if(grid[i][j]=='0') return true;
