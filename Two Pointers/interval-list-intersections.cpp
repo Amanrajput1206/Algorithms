@@ -20,12 +20,16 @@ public:
         if(i >= firstList.size() or j >= secondList.size()){ //checking if if have reached the end of list
             return;
         }
-        if(secondList[j][0] <= firstList[i][1] and (firstList[i][0] <= secondList[j][1])){ // checking whether our pointers are in bounds with respect to each other or intersection is possible or not.
+        //let L1=(a,b) and L2=(c,d) then if c<=b and a<=d then only intersection is possible i.e second interval is starting before the end of first and First Interval is starting before the end of Second.
+        if(secondList[j][0] <= firstList[i][1] and (firstList[i][0] <= secondList[j][1])){ 
+            
+            // checking whether our pointers are in bounds with respect to each other or intersection is possible or not.
                 ans.push_back(max(firstList[i][0], secondList[j][0]));
                 ans.push_back(min(firstList[i][1], secondList[j][1]));
                 v.push_back(ans);
                 ans.clear();
-        } 
+        }
+        //if the seond interval has ended then update it to next interval i.e j=j+1, else update the first interval.
         if(firstList[i][1] > secondList[j][1])  j += 1;
         else i += 1; // moving the pointer based on the largest end value.
         recurse(firstList, secondList, i, j); // Calling recursive function.
