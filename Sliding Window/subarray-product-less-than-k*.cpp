@@ -1,6 +1,7 @@
 // Problem statement: https://leetcode.com/problems/subarray-product-less-than-k/
 // Given an array of integers nums and an integer k, return the number of contiguous subarrays where the product of all the elements in the subarray is strictly less than k.
 
+// **CONCEPT**: You will get all the number of subarrays if you add the length of the sliding window whenever the condition is satisfied i.e the length of the subarray can be found if you add all the natural numbers upto the length of the array.
 class Solution {
 public:
     int numSubarrayProductLessThanK(vector<int>& nums, int k) {
@@ -21,3 +22,4 @@ public:
         return count;
     }
 };
+
