@@ -10,13 +10,13 @@
 class Solution {
 public:
     int shortestPathBinaryMatrix(vector<vector<int>>& grid) {
+        //if first and last cell are 1 then path is not possible
         if(grid[0][0] == 1)
             return -1;
-        
         int s = grid.size();
         if(grid[s-1][s-1] != 0)
             return -1;
-
+        //Create a queue and push the initial coordiates along with the path length and mark it -1. Then apply 8 dimensional bfs for the adjacent cells with 0 and keep marking them -1. 
         queue<pair<pair<int, int>, int>> q;
         q.push({{0, 0}, 1});
         grid[0][0] = -1;
@@ -30,14 +30,14 @@ public:
             int j = val.first.second;
             int path = val.second;
             q.pop();
-
+        //path will end if it reaches the last cell
             if(i == s-1 && j == s-1)
                 return path;
 
             for(int idx=0;idx<8;idx++){
                 int row = i + drow[idx];
                 int col = j + dcol[idx];
-
+            //if the point is within bounds and it's value is 0 then make it -1 and add it to the path and push it in the queue for further bfs
                 if(row >= 0 && row < s && col >= 0 && col < s && grid[row][col] == 0){
                     grid[row][col] = -1;
                     q.push({{row, col}, path+1});
