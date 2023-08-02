@@ -5,7 +5,7 @@
 class Solution {
 public:
     void solve(vector<int>& nums, int index, vector<vector<int>>& ans){
-        //base case to end
+        //base case to end. Since it is permutation and not subset, we need to make sure that the length of the intermediate array is equal to the length of the actual array.
         if(index>=nums.size()){
             ans.push_back(nums);
             return;
