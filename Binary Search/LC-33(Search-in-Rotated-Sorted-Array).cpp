@@ -1,3 +1,6 @@
+// ALT - LC-81(Search in Rotated Sorted Array II)
+// The point is that one half of the array will always be sorted and the other half will always contain the pivot. Not if nums[mid] > nums[lo] then left half is surely sorted and if nums[mid]==nums[lo] then also it is baically sorted in non-decreasing order. Otherwise the right side is considered sorted.
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -26,7 +29,7 @@ int search(vector<int>& nums, int target) {
             if(nums[mid]==target){
                 return mid;
             }
-// need to check in which half of the sorted array we are present. The outer check is needed because we don't know which part is completely sorted and which part has the rotation point in it. We can check if the target lies in the sorted part because that's the only reliable check we can do, if the check fails, then the target is surely in the other half.
+// need to check in which half of the sorted array we are present. The outer check is needed because we don't know which part is completely sorted and which part has the pivot point in it. We can check if the target lies in the sorted part because that's the only reliable check we can do, if the check fails, then the target is surely in the other half.
 
             //check if left is sorted
             if(nums[mid]>=nums[lo]){
