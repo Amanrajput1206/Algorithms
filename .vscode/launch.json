@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "f:/Coding/Algorithms/Array",
-      "program": "f:/Coding/Algorithms/Array/build/Debug/outDebug",
+      "cwd": "f:/Coding/Algorithms/Binary-Search",
+      "program": "f:/Coding/Algorithms/Binary-Search/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
