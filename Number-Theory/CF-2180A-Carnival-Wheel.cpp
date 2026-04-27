@@ -1,4 +1,4 @@
-// The solution for this problem is based on extended Euclidean algorithm and Bézout's Identity to find the largest integer `x` such that `x < l` and `x ≡ a (mod b). In simple words, this identity states that k·b mod l cycles through exactly the multiples of gcd(b, l). Hence we just need to find the largest number which is found when we start from a and keep adding the gcd(b, l) until we reach or exceed l. The largest such number will be our answer.
+// The solution for this problem is based on extended Euclidean algorithm and Bézout's Identity to find the largest integer `x` such that x < l and x ≡ a (mod b). In simple words, this identity states that k·b mod l cycles through exactly the multiples of gcd(b, l). Hence we just need to find the largest number which is found when we start from a and keep adding the gcd(b, l) until we reach or exceed l. The largest such number will be our answer.
 
 #include <bits/stdc++.h>
 using namespace std;
